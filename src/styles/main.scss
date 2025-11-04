@@ -1,5 +1,51 @@
-$bgColor: #c3c3c3;
+@use 'variables';
+@use 'hero';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $bgColor;
+    background-color: variables.$corDeFundo;
+    font-family: Lato, sans-serif;
+}
+
+@mixin text($fontSize: 18px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variables.$corTextoPrincipal;
+}
+
+@mixin title($fontSize: 44px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variables.$corDestaque;
+    font-family: Cinzel, serif;
+    text-transform: uppercase;
+}
+
+.text--big {
+    @include text(20px);
+}
+
+.text {
+    @include text();
+}
+
+.text--small {
+    @include text(16px);
+}
+
+.title--big {
+    @include title(48px);
+}
+
+.title {
+    @include title();
+}
+
+.title--small {
+    @include title(36px);
 }
