@@ -6,7 +6,7 @@
     &__list {
         margin-top: 44px;
         display: none;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         gap: 24px;
 
         &--is-active {
@@ -16,11 +16,12 @@
         &__item {
             img {
                 width: 100%;
-                height: 500px;
+                aspect-ratio: 2 / 3;
                 object-fit: cover;
                 border-radius: 4px;
                 filter: grayscale(100%) brightness(80%);
                 transition: all 0.3s ease;
+                max-height: 500px;
 
                 &:hover {
                     filter: grayscale(0%) brightness(100%);
@@ -54,6 +55,33 @@
             &--is-active {
                 border-bottom: 5px solid variables.$corDestaque;
             }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .midia {
+        &__list {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .midia {
+        &__list {
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .midia {
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 12px;
         }
     }
 }
