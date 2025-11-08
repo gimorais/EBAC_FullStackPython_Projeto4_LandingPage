@@ -14,11 +14,13 @@
         }
         
         &__item {
+            overflow: hidden;
+            border-radius: 4px;
+
             img {
-                width: 100%;
-                aspect-ratio: 2 / 3;
-                object-fit: contain;
-                border-radius: 4px;
+                height: 100%;
+                width: 300px;
+                object-fit: cover;
                 filter: grayscale(100%) brightness(80%);
                 transition: all 0.3s ease;
                 max-height: 500px;
@@ -54,6 +56,18 @@
 
             &--is-active {
                 border-bottom: 5px solid variables.$corDestaque;
+            }
+        }
+    }
+}
+
+@media (min-width: 1980px) {
+    .midia {
+        &__list {
+            &__item {
+                img {
+                    
+                }
             }
         }
     }
