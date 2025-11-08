@@ -17,7 +17,7 @@
             img {
                 width: 100%;
                 aspect-ratio: 2 / 3;
-                object-fit: cover;
+                object-fit: contain;
                 border-radius: 4px;
                 filter: grayscale(100%) brightness(80%);
                 transition: all 0.3s ease;
@@ -59,11 +59,24 @@
     }
 }
 
+@media (max-width: 1600px) {
+    .midia {
+        &__list {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+    }
+}
+
+
 @media (max-width: 1200px) {
     .midia {
         &__list {
             grid-template-columns: 1fr 1fr 1fr;
             gap: 20px;
+            &__item img {
+                object-fit: cover;
+            }
         }
     }
 }
