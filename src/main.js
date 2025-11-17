@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('[data-tab-button]');
     const tabs = document.querySelectorAll('[data-tab-id]');
+    const questions = document.querySelectorAll('[data-faq-question]');
 
     // percorre cada botão
     buttons.forEach(button => {
@@ -17,4 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
         targetTab.classList.add('midia__list--is-active');
         });
     });
+
+    for (let i = 0; i < questions.length; i++) {
+        questions[i].addEventListener('click', abreOuFechaResposta);
+    }
 });
+
+function abreOuFechaResposta(elemento) {
+    const classe = 'faq__questions__item--is-open';
+    const elementoPai = elemento.target.parentNode;
+
+    elementoPai.classList.toggle(classe);
+}
