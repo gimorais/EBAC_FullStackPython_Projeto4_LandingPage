@@ -1,0 +1,74 @@
+@use 'variables';
+
+.header {
+    width: 100%;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: variables.$corDeFundo;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    &__logo {
+        width: 50px;
+    }
+
+    nav {
+        display: flex;
+        gap: 24px;
+
+        a {
+            text-decoration: none;
+            color: variables.$corDestaque;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: variables.$corDestaqueAcoes;
+            }
+        }
+    }
+
+    &__button {
+        padding: 16px;
+        background: variables.$corDestaque;
+        color: variables.$corTextoPrincipal;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 8px;
+        border: variables.$corDestaque 2px solid;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: variables.$corDestaqueAcoes;
+        }
+    }
+
+    &__hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+
+        div {
+            width: 24px;
+            height: 2px;
+            background: variables.$corDestaque;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    nav, .header__button {
+        display: none; /* esconde menu */
+    }
+    .header__hamburger {
+        display: flex;
+    }
+}

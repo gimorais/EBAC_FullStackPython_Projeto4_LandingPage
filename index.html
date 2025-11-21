@@ -10,6 +10,24 @@
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
+    <header class="header">
+        <img class="header__logo" src="./dist/images/mockingjay.png" alt="Logo">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#midia">Livros & Filmes</a>
+            <a href="#watch-anywhere">Assistir</a>
+            <a href="#faq">Perguntas</a>
+        </nav>
+
+        <a class="header__button" href="#">Entrar</a>
+
+        <!-- ícone mobile -->
+        <div class="header__hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
     <section class="hero">
         <div class="hero__background">
             <iframe
@@ -69,7 +87,7 @@
             </li>
         </ul>
     </section>
-    <section class="watch-anywhere">
+    <section class="watch-anywhere" id="watch-anywhere">
         <img src="./dist/images/Televised_HungerGames.jpg" alt="">
         <div class="watch-anywhere__text_container">
             <h2 class="title">Assista aos Jogos Vorazes</h2>
@@ -125,7 +143,7 @@
             </li>
         </ul>
     </section>
-    <section class="faq">
+    <section class="faq" id="faq">
         <h2 class="title">Diretrizes da Capital</h2>
         <ul class="faq__questions">
             <li class="faq__questions__item">
