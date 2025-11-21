@@ -5,16 +5,27 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
+    @media (max-width: 768px) {
+        display: block;
+    }
+
     img {
         max-width: 100%;
         border-radius: 8px;
         aspect-ratio: 1/1;
         object-fit: cover;
         display: block;
+        margin-bottom: 40px;
     }
 
     &__text_container {
         padding: 0 2vw;
+
+        @media (max-width: 768px) {
+            position: relative;
+            left: 0;
+            width: 100%;
+        }
 
         h2 {
             margin-bottom: 24px;

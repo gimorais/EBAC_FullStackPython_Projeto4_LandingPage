@@ -16,14 +16,14 @@
         &__item {
             overflow: hidden;
             border-radius: 4px;
+            aspect-ratio: 2 / 3;
 
             img {
                 height: 100%;
-                width: 300px;
+                width: 100%;
                 object-fit: cover;
                 filter: grayscale(100%) brightness(80%);
                 transition: all 0.3s ease;
-                max-height: 500px;
 
                 &:hover {
                     filter: grayscale(0%) brightness(100%);
@@ -62,41 +62,29 @@
 }
 
 @media (max-width: 1600px) {
-    .midia {
-        &__list {
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
-        }
+    .midia__list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
 }
 
-
 @media (max-width: 1200px) {
-    .midia {
-        &__list {
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
-            &__item img {
-                object-fit: cover;
-            }
-        }
+    .midia__list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
 }
 
 @media (max-width: 768px) {
-    .midia {
-        &__list {
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
+    .midia__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
 }
 
 @media (max-width: 480px) {
-    .midia {
-        &__list {
-            grid-template-columns: 1fr;
-            gap: 12px;
-        }
+    .midia__list {
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 }

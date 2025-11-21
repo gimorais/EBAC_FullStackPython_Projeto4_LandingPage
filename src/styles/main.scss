@@ -34,24 +34,48 @@ body {
 
 .text--big {
     @include text(20px);
+
+    @media (max-width: 768px) {
+        @include text(16px);
+    }
 }
 
 .text {
     @include text();
+
+    @media (max-width: 768px) {
+        @include text(14px);
+    }
 }
 
 .text--small {
     @include text(16px);
+
+    @media (max-width: 768px) {
+        @include text(12px);
+    }
 }
 
 .title--big {
     @include title(48px);
+
+    @media (max-width: 768px) {
+        @include title(26px);
+    }
 }
 
 .title {
     @include title();
+
+    @media (max-width: 768px) {
+        @include title(24px);
+    }
 }
 
 .title--small {
     @include title(36px);
+
+    @media (max-width: 768px) {
+        @include title(22px);
+    }
 }
